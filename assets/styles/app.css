@@ -1,3 +1,15 @@
 body {
     background-color: skyblue;
 }
+
+.alert{
+    outline: 2px;
+}
+
+.alert-success{
+    background-color: greenyellow;
+}
+
+.alert-danger{
+    background-color: red;
+}
