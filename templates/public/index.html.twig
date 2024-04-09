@@ -4,9 +4,15 @@
 
 {% block body %}
 
-    <h1>Hello {{ name }}! ✅</h1>
 
-    <twig:Alert type="danger" message="Oh no! The dinos escaped!"/>
-    {{component('Alert',{message:'aaaaaaaaaaaah'})}}
+    
+     {% for new in news_list %}
+
+    
+        <twig:Inset type="{{ new.type|e }}" title="{{ new.title|e }}" link="{{ new.link|e }}" imgurl="{{ new.imgurl|e }}" imgalt="{{ new.imgalt|e }}" />
+        {% else %} {# if no entities found #}
+        <em>no data found</em>
+
+    {% endfor %}
 
 {% endblock %}
