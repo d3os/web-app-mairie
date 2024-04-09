@@ -13,19 +13,32 @@ class PublicController extends AbstractController
     {
 
         $news_list = [];
+        $agenda_list = [];
 
         for ($i=0; $i < 4; $i++) { 
             array_push($news_list, [
-                "type"=>"news", 
                 "title"=>"News{$i}", 
                 "link"=>"https://juliensousa.fr/", 
                 "imgurl"=>"https://pbs.twimg.com/profile_images/821723876208021504/UsXO_Hus_400x400.jpg", 
-                "imgalt"=>"phto temp"
+                "imgalt"=>"photo temp"
+            ]);
+        }
+
+        for ($i=0; $i < 4; $i++) { 
+            array_push($agenda_list, [
+                "title"=>"Date{$i}", 
+                "dateAttr" => "2021-04-05",
+                "dayText" => "05",
+                "monthText" => "avril",
+                "link"=>"https://juliensousa.fr/", 
+                "imgurl"=>"https://pbs.twimg.com/profile_images/821723876208021504/UsXO_Hus_400x400.jpg", 
+                "imgalt"=>"photo temp"
             ]);
         }
 
         return $this->render('public/index.html.twig', [
             'news_list' => $news_list,
+            'agenda_list' => $agenda_list,
         ]);
     }
 }

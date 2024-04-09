@@ -3,16 +3,28 @@
 {% block title %}Hello PublicController!{% endblock %}
 
 {% block body %}
-
-
     
-     {% for new in news_list %}
-
-    
-        <twig:Inset type="{{ new.type|e }}" title="{{ new.title|e }}" link="{{ new.link|e }}" imgurl="{{ new.imgurl|e }}" imgalt="{{ new.imgalt|e }}" />
+    {% for new in news_list %}
+        <twig:Inset:News title="{{ new.title|e }}" link="{{ new.link|e }}" imgurl="{{ new.imgurl|e }}" imgalt="{{ new.imgalt|e }}" />
         {% else %} {# if no entities found #}
         <em>no data found</em>
+    {% endfor %}
 
+    {% for date in agenda_list %}
+      
+        {{ component('Inset:Agenda', {
+            title: date.title|e,
+            link: date.link|e,
+            imgurl: date.imgurl|e,
+            imgalt: date.imgalt|e,
+            dayText: date.dayText|e,
+            monthText: date.monthText|e,
+            dateAttr: date.dateAttr|e,
+            }) 
+        }}
+
+        {% else %} {# if no entities found #}
+        <em>no data found</em>
     {% endfor %}
 
 {% endblock %}
