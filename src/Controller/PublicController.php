@@ -24,7 +24,7 @@ class PublicController extends AbstractController
             ]);
         }
 
-        for ($i=0; $i < 4; $i++) { 
+        for ($i=0; $i < 5; $i++) { 
             array_push($agenda_list, [
                 "title"=>"Date{$i}", 
                 "dateAttr" => "2021-04-05",

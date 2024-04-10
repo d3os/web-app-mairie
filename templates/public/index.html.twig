@@ -1,8 +1,14 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Hello PublicController!{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/insets.scss') }}">
+{% endblock %}
 
 {% block body %}
+
+    <section class="section news">
+        <h3 class="section__tile"> Les nouveautés</h3>
     
     {% for new in news_list %}
         <twig:Inset:News title="{{ new.title|e }}" link="{{ new.link|e }}" imgurl="{{ new.imgurl|e }}" imgalt="{{ new.imgalt|e }}" />
@@ -10,6 +16,10 @@
         <em>no data found</em>
     {% endfor %}
 
+    </section>
+
+    <section class="agenda">
+        <h3 class="section__tile"> Les rendez Vous</h3>
     {% for date in agenda_list %}
       
         {{ component('Inset:Agenda', {
@@ -26,5 +36,7 @@
         {% else %} {# if no entities found #}
         <em>no data found</em>
     {% endfor %}
+
+     </section>
 
 {% endblock %}

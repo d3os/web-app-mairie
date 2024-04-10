@@ -1,0 +1,37 @@
+.inset{
+    display: block;
+
+    .inset__img{
+        border-radius: 15%;
+        border: solid var(--first-color);
+
+    }
+
+    .inset__title{
+        display: block;
+    }
+
+    
+}
+
+
+
+
+@media screen and (min-width: 761px){}
+
+@media screen and (min-width: 768px){}
+
+
+@media screen and (min-width:1024px){}
+
+/* 
+Mobile portrait -> 480px
+Mobile landscape -> 767px
+
+Tablet portrait -> 768px - 959px
+
+Tablet landscape / Desktop -> 960px -1599px
+
+Large Desktop -> 1600px
+
+*/
