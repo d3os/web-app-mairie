@@ -15,11 +15,11 @@ class PublicController extends AbstractController
         $news_list = [];
         $agenda_list = [];
 
-        for ($i=0; $i < 4; $i++) { 
+        for ($i=0; $i < 2; $i++) { 
             array_push($news_list, [
-                "title"=>"News{$i}", 
+                "title"=>"News bababbababa numero{$i}", 
                 "link"=>"https://juliensousa.fr/", 
-                "imgurl"=>"https://pbs.twimg.com/profile_images/821723876208021504/UsXO_Hus_400x400.jpg", 
+                "imgurl"=>"https://static.cnews.fr/sites/default/files/gigi_williams_366676_copier-taille1200_6202ada544ad4.jpg", 
                 "imgalt"=>"photo temp"
             ]);
         }
@@ -31,7 +31,7 @@ class PublicController extends AbstractController
                 "dayText" => "05",
                 "monthText" => "avril",
                 "link"=>"https://juliensousa.fr/", 
-                "imgurl"=>"https://pbs.twimg.com/profile_images/821723876208021504/UsXO_Hus_400x400.jpg", 
+                "imgurl"=>"https://quovadis1954.com/app/uploads/2022/06/ambiance-agenda-sur-mesure-quo-vadis.jpg", 
                 "imgalt"=>"photo temp"
             ]);
         }

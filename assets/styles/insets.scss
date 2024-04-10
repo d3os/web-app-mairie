@@ -1,37 +1,71 @@
 .inset{
     display: block;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
 
     .inset__img{
-        border-radius: 15%;
-        border: solid var(--first-color);
-
-    }
-
-    .inset__title{
-        display: block;
+     
+        border-radius: 2rem;
+        border: 0.75rem solid #3C4488;
     }
 
     
+        .inset__title{
+            display: block;
+            width: 75%;
+            border: 0.7rem solid #3C4488;
+            border-radius: 2rem;
+            z-index: 3;
+            background-color: white;
+            font-size: var(--h2-font-size);
+            font-weight: var(--font-bold);
+            color: var(--title-color);
+
+            position: relative;
+            left: 12.5%;
+            bottom: 3rem;
+            text-align: center;
+            text-overflow: ellipsis;
+            padding: 1rem;
+        }
+    
+
+    .inset__date{
+
+        display: block;
+            width: 30%;
+            border: 0.7rem solid #3C4488;
+            border-radius: 2rem;
+            z-index: 3;
+            background-color: white;
+            font-size: var(--h2-font-size);
+            font-weight: var(--font-bold);
+            color: var(--title-color);
+
+            position: relative;
+            left: 35%;
+            top: 5rem;
+            text-align: center;
+            text-overflow: ellipsis;
+            padding: 1rem;
+
+        .inset__date-day{
+            font-size: var(--giga-font-size);
+        }
+        .inset__date-month{
+            font-size: var(--h1-font-size);
+        }
+    
+    }
+
+    @media screen and (orientation: landscape)and (min-width: 768px){
+        width: 20rem;
+        height: 15rem;
+    .inset__img{
+        width: 19rem;
+        height: 13rem;
+      
+    }
+    }   
 }
-
-
-
-
-@media screen and (min-width: 761px){}
-
-@media screen and (min-width: 768px){}
-
-
-@media screen and (min-width:1024px){}
-
-/* 
-Mobile portrait -> 480px
-Mobile landscape -> 767px
-
-Tablet portrait -> 768px - 959px
-
-Tablet landscape / Desktop -> 960px -1599px
-
-Large Desktop -> 1600px
-
-*/

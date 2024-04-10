@@ -7,36 +7,35 @@
 
 {% block body %}
 
-    <section class="section news">
-        <h3 class="section__tile"> Les nouveautés</h3>
-    
-    {% for new in news_list %}
-        <twig:Inset:News title="{{ new.title|e }}" link="{{ new.link|e }}" imgurl="{{ new.imgurl|e }}" imgalt="{{ new.imgalt|e }}" />
-        {% else %} {# if no entities found #}
-        <em>no data found</em>
-    {% endfor %}
-
+    <section class="news section" id="news">
+        <h3 class="section__title">Les nouveautés</h3>
+        <div class="section__body container">
+            {% for new in news_list %}
+                <twig:Inset:News title="{{ new.title|e }}" link="{{ new.link|e }}" imgurl="{{ new.imgurl|e }}" imgalt="{{ new.imgalt|e }}" />
+                {% else %} {# if no entities found #}
+                <em>no data found</em>
+            {% endfor %}
+        </div>
     </section>
 
-    <section class="agenda">
-        <h3 class="section__tile"> Les rendez Vous</h3>
-    {% for date in agenda_list %}
-      
-        {{ component('Inset:Agenda', {
-            title: date.title|e,
-            link: date.link|e,
-            imgurl: date.imgurl|e,
-            imgalt: date.imgalt|e,
-            dayText: date.dayText|e,
-            monthText: date.monthText|e,
-            dateAttr: date.dateAttr|e,
-            }) 
-        }}
-
-        {% else %} {# if no entities found #}
-        <em>no data found</em>
-    {% endfor %}
-
-     </section>
+    <section class="agenda section" id="agenda">
+        <h3 class="section__title"> Les rendez Vous</h3>
+        <div class="section__body container">
+            {% for date in agenda_list %}
+                {{ component('Inset:Agenda', {
+                    title: date.title|e,
+                    link: date.link|e,
+                    imgurl: date.imgurl|e,
+                    imgalt: date.imgalt|e,
+                    dayText: date.dayText|e,
+                    monthText: date.monthText|e,
+                    dateAttr: date.dateAttr|e,
+                    }) 
+                }}
+                {% else %} {# if no entities found #}
+                <em>no data found</em>
+            {% endfor %}
+        </div>
+    </section>
 
 {% endblock %}
