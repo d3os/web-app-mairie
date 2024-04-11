@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="">
+        <link rel="icon" href={{ asset('pictures/favicon.png') }}>
         {% block importmap %}{{ importmap('app')}}{% endblock %}
         {% block stylesheets %}{% endblock %}
         {% block scripts %}{% endblock %}
