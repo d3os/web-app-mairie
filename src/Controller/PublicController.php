@@ -17,7 +17,7 @@ class PublicController extends AbstractController
 
         for ($i=0; $i < 2; $i++) { 
             array_push($news_list, [
-                "title"=>"News bababbababa numero{$i}", 
+                "title"=>"Lorem IpsNews numero{$i}", 
                 "link"=>"https://juliensousa.fr/", 
                 "imgurl"=>"https://static.cnews.fr/sites/default/files/gigi_williams_366676_copier-taille1200_6202ada544ad4.jpg", 
                 "imgalt"=>"photo temp"
@@ -26,7 +26,7 @@ class PublicController extends AbstractController
 
         for ($i=0; $i < 5; $i++) { 
             array_push($agenda_list, [
-                "title"=>"Date{$i}", 
+                "title"=>"Lorem IpsDate numero{$i}", 
                 "dateAttr" => "2021-04-05",
                 "dayText" => "05",
                 "monthText" => "avril",

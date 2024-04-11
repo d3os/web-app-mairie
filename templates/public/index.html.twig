@@ -2,10 +2,17 @@
 
 {% block title %}Hello PublicController!{% endblock %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/insets.scss') }}">
+    <link rel="stylesheet" href="{{ asset('styles/insets.css') }}">
 {% endblock %}
 
 {% block body %}
+    <p style="font-size: var(--big-font-size)">Lorem Ipsum Dolor Sit Amet</p>
+    <p style="font-size: var(--h1-font-size)">Lorem Ipsum Dolor Sit Amet</p>
+    <p style="font-size: var(--h2-font-size)">Lorem Ipsum Dolor Sit Amet</p>
+    <p style="font-size: var(--h3-font-size)">Lorem Ipsum Dolor Sit Amet</p>
+    <p style="font-size: var(--normal-font-size)">Lorem Ipsum Dolor Sit Amet</p>
+    <p style="font-size: var(--small-font-size)">Lorem Ipsum Dolor Sit Amet</p>
+    <p style="font-size: var(--smaller-font-size)">Lorem Ipsum Dolor Sit Amet</p>
 
     <section class="news section" id="news">
         <h3 class="section__title">Les nouveautés</h3>

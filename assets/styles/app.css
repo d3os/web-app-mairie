@@ -5,7 +5,7 @@
 /*================ DEFINITION OF VARIABLES ================*/
 :root {
   /*__________ GLOBAL __________*/
-  font-size: 16px; /*default is 16 but force in case of*/
+  /*rem unit is based on font-size of :root*/font-size: 16px; /*default is 16 but force in case of*/
   --zoom-factor: 1;
 
   /*__________ Z INDEXES __________*/
@@ -53,18 +53,30 @@
 
   /*__________ FONT SIZE __________*/
   /* (mobile first) -> For small devices */
-  --big-font-size: calc( 2rem * var(--zoom-factor));
+  --big-font-size: calc( 2.25rem * var(--zoom-factor));
   --h1-font-size: calc( 1.5rem * var(--zoom-factor));
   --h2-font-size: calc( 1.25rem * var(--zoom-factor));
   --h3-font-size: calc( 1.125rem  * var(--zoom-factor));
-  --normal-font-size: calc( .9375rem  * var(--zoom-factor));
+  --normal-font-size: calc( .938rem  * var(--zoom-factor));
   --small-font-size: calc( .813rem  * var(--zoom-factor));
   --smaller-font-size: calc( .75rem  * var(--zoom-factor));
 }
+/* For small devices */
+@media screen and (max-width: 568px){
+  :root{
+  --big-font-size: calc( 2.25rem * var(--zoom-factor));
+  --h1-font-size: calc( 1.5rem * var(--zoom-factor));
+  --h2-font-size: calc( 1.25rem * var(--zoom-factor));
+  --h3-font-size: calc( 1.125rem  * var(--zoom-factor));
+  --normal-font-size: calc( .938rem  * var(--zoom-factor));
+  --small-font-size: calc( .813rem  * var(--zoom-factor));
+  --smaller-font-size: calc( .75rem  * var(--zoom-factor));
+  }
+}
 /* For large devices */
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 968px){
   :root {
-    --giga-font-size: 6rem ;
+    
     --big-font-size: calc(3rem * var(--zoom-factor));
     --h1-font-size: calc(2.25rem * var(--zoom-factor));
     --h2-font-size: calc(1.5rem  * var(--zoom-factor));
@@ -98,6 +110,13 @@ body {
 h1, h2, h3, h4 {
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
+}
+
+h1{
+  size: var(--h2-font-size);
+}
+h2{
+  size: var(--h1-font-size);
 }
 
 ul {
