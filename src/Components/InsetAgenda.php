@@ -1,11 +1,8 @@
 <?php
-namespace App\Twig\Components;
-
+namespace App\Components;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
-use DateTimeImmutable;
-use Exception;
 
-#[AsTwigComponent('Inset:Agenda')]
+#[AsTwigComponent]
 class InsetAgenda
 {
     

@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.html.twig": "html",
+        "*.html": "twig"
+    },
+    "editor.suggest.insertMode": "replace",
+    "emmet.includeLanguages": {
+        "twig": "html"
+    },
+}

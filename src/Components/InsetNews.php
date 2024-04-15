@@ -1,9 +1,8 @@
 <?php
-namespace App\Twig\Components;
-
+namespace App\Components;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
-#[AsTwigComponent('Inset:News')]
+#[AsTwigComponent]
 class InsetNews
 {
     public string $type ="news";
