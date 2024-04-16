@@ -9,6 +9,28 @@
         {% block scripts %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <twig:Banner />
+        </header>
+
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+        
+        <footer class="footer" id="footer" >
+            <img alt="logo de combronde" class="footer__logo" src={{ asset('pictures/white_logo_600.webp') }} />
+            <span>Marie de Combronde</span>
+            <span>6 rue de l'Hôtel-de-Ville <br/> 63460 Combronde</span>
+            <span>04 73 97 10 25</span>
+            <hr/>
+            <span>© Municipalité de Combronde - 2024</span>
+            <menu>
+                <li><a>Plan du site</a></li>
+                <li><a>Mentions légales</a></li>
+                <li><a>Accessibilité</a></li>
+                <li><a>Données personnelles</a></li>
+                <li><a>Gestion des Cookies</a></li>
+            </menu>
+        </footer>
     </body>
 </html>
